@@ -1,0 +1,208 @@
+body{
+ background-image: linear-gradient(to right, rgb(32, 32, 32), rgb(111, 111, 255));
+ margin: 0;
+ padding: 0;
+  
+}
+
+/* image */
+.image-container{
+    overflow: hidden;
+}
+.image-container h2{
+        position: relative;
+        font-size: 40px;
+        color: white;
+}
+
+.imge{
+   display: block;
+   margin-left: 15%;
+   margin-right: auto;
+   width: 22%;
+   padding: 9px;
+   float: left;
+}
+.logo{
+    display: block;
+    width: 2%;
+    margin-left: auto;
+   
+}
+/* nav-bar-css */
+.navbar{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 30px;   
+}
+.items{
+    font-size: 20px;
+    transition: .5;
+}
+.items:hover{
+    color: rgb(182, 238, 229);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* for scrolling */
+
+.scroll-view{
+min-height: 2vh;
+    animation: body 2s linear;
+}
+@keyframes scroll-view {
+    to {
+        background-color: rgb(19, 48, 97);
+    }
+}
+
+.progress {
+    height: 3px;
+    width: 0%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: progress 1s linear;
+}
+
+@keyframes progress {
+    to {
+        background-color: rgb(20, 255, 226);
+        width: 100%;
+    }
+}
+
+.cube-wrap {
+    --size: 20vmin;
+    position: fixed;
+    margin-top: 10%;
+    top: 0%;
+    left: 10%;
+    width: 0;
+    height: 0;
+    perspective: 100vmin;
+    
+}
+.font-size{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.cube {
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateZ(45deg) rotateY(-45deg);
+    animation: cube 1s linear;
+    border: 4px solid red;
+}
+
+@keyframes cube {
+    to {
+        transform: rotateX(360deg) rotateZ(45deg) rotateY(-45deg);
+    }
+}
+
+.side {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    background-color: #eee;
+    backface-visibility: visible;
+    top: calc(var(--size) * -.5);
+    left: calc(var(--size) * -.5);
+    border: 1px solid white;
+}
+
+.top {
+    background-color: #d4cfcf;
+    /* background-color: transparent; */
+    transform: rotateX(90deg) translateZ(calc(var(--size) * .5));
+}
+
+.bottom {
+    background-color: #999;
+    transform: rotateX(90deg) translateZ(calc(var(--size) * -.5));
+    
+}
+
+.left {
+    background-color: #ccc;
+    transform: rotateY(90deg) translateZ(calc(var(--size) * .5));
+}
+
+.right {
+    background-color: #ddd;
+    transform: rotateY(90deg) translateZ(calc(var(--size) * -.5));
+}
+
+.front {
+    background-color: #aaa;
+    transform: translateZ(calc(var(--size) * .5));
+}
+
+.back {
+    background-color: #bbb;
+    transform: translateZ(calc(var(--size) * -.5));
+}
+
+:root * {
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+
+@media screen and (max-width: 770px) {
+    .image-container h2 {
+            position: relative;
+            font-size: 20px;
+            color: white;
+        }
+                .imge {
+                    display: block;
+                    margin-left: 17%;
+                    margin-right: auto;
+                    width: 26%;
+                    /* padding: 9px; */
+                    float: left;
+                        }
+                .navbar {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: right;
+                    padding-right: 20px;
+                    gap: 30px;
+                }
+        .items {
+            font-size: 17px;
+        }
+                .cube-wrap {
+                    --size: 15vmin;
+                    position: fixed;
+                    margin-top: 10%;
+                    top: 0%;
+                    left: 10%;
+                    width: 0;
+                    height: 0;
+                    perspective: 100vmin;
+                    padding-top: 75px;
+                }
+         .font-size {
+                    font-size: 10px;
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    font-weight: bold;
+                    text-align: center;
+                    }
+}

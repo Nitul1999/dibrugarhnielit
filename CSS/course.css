@@ -1,0 +1,108 @@
+.course{
+    padding-top: 40px;
+}
+.course-container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+.text-course{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.courseabout{
+    padding-top: 1px;
+    font-size: 15px;
+}
+.coursedetails{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.box{
+    height: 400px;
+    /* border-radius: 6px; */
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.box>img {
+    width: 100%;
+    transition: all 1s;
+
+}
+
+.box img:hover {
+    transform: scale(1.1);
+
+}
+.course-head{
+    padding-bottom: 40px;
+    font-size: 35px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.box {
+    background-color: lightblue;
+    padding: 20px;
+    margin: 20px;
+    /* -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0px 10px 2px 10px #777 */
+}
+.tit {
+    font-size: 17px;
+    color: black;
+}
+.course-name{
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+span{
+    color: blueviolet;
+    font-size: 18px;
+}
+
+
+p > a {
+    font-size: .7em;
+    color: rgb(81, 52, 88);
+    transition: .3s;
+}
+p> a:hover{
+    color:black;
+    font-weight: bold;
+}
+.duration{
+    color: black;
+    padding-top: 2px;
+    font-size: 15px;
+}
+
+/* view-btn */
+.more-course-btn{
+    color: white;
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 20px;
+    cursor: pointer;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: .5s;
+}
+.more-course-btn:hover{
+    font-size: 22px;
+    border: 0.5px solid rgb(5, 231, 247);
+}
+.others-course{
+        padding-top: 25px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+}
